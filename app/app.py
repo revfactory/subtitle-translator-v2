@@ -811,6 +811,7 @@ class SubtitleTranslatorApp(QMainWindow):
         model_label.setStyleSheet("font-weight: bold; font-size: 14px;")
         self.model_combo = QComboBox()
         self.model_combo.addItems([
+            "claude-sonnet-4-5",
             "claude-sonnet-4-20250514",
             "claude-opus-4-20250514",
             "claude-3-7-sonnet-20250219"

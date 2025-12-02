@@ -16,7 +16,7 @@ from tqdm import tqdm
 class SubtitleTranslationConfig:
     """자막 번역 관련 설정을 관리하는 클래스"""
     
-    DEFAULT_MODEL = "claude-sonnet-4-20250514"
+    DEFAULT_MODEL = "claude-opus-4-5-20251101"
     DEFAULT_BATCH_SIZE = 5
     DEFAULT_MAX_TOKENS = 8000
     DEFAULT_MAX_WORKERS = 3
@@ -28,8 +28,8 @@ class SubtitleTranslationConfig:
         self.batch_size = self.DEFAULT_BATCH_SIZE
         self.max_tokens = self.DEFAULT_MAX_TOKENS
         self.max_workers = self.DEFAULT_MAX_WORKERS
-        self.input_token_cost = 3 / 1_000_000  # 1M 토큰당 $3
-        self.output_token_cost = 3.75 / 1_000_000  # 1M 토큰당 $3.75
+        self.input_token_cost = 5 / 1_000_000  # 1M 토큰당 $5
+        self.output_token_cost = 25 / 1_000_000  # 1M 토큰당 $25
         
         # 명령줄 인자 처리
         self.parser = self._create_argument_parser()
